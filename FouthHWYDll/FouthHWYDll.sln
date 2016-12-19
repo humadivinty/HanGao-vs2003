@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FouthHWYDll", "FouthHWYDll.vcproj", "{2C8CCBA9-96FE-4988-8CF6-F6E532903229}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TesTool_FouthHWYDll", "..\TesTool_FouthHWYDll\TesTool_FouthHWYDll.vcproj", "{D941C957-917B-4476-A82B-836F1BB26235}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2C8CCBA9-96FE-4988-8CF6-F6E532903229}.Debug.ActiveCfg = Debug|Win32
+		{2C8CCBA9-96FE-4988-8CF6-F6E532903229}.Debug.Build.0 = Debug|Win32
+		{2C8CCBA9-96FE-4988-8CF6-F6E532903229}.Release.ActiveCfg = Release|Win32
+		{2C8CCBA9-96FE-4988-8CF6-F6E532903229}.Release.Build.0 = Release|Win32
+		{D941C957-917B-4476-A82B-836F1BB26235}.Debug.ActiveCfg = Debug|Win32
+		{D941C957-917B-4476-A82B-836F1BB26235}.Debug.Build.0 = Debug|Win32
+		{D941C957-917B-4476-A82B-836F1BB26235}.Release.ActiveCfg = Release|Win32
+		{D941C957-917B-4476-A82B-836F1BB26235}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

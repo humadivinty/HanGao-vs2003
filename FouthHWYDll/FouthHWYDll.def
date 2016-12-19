@@ -1,0 +1,9 @@
+LIBRARY FouthHWYDll
+EXPORTS
+
+SetServerPort
+StartServer
+Trigger
+RegisterNETStatusEvent
+StopServer
+GetPlateInfo
