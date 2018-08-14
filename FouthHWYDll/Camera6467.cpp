@@ -691,6 +691,26 @@ void Camera6467::AnalysisAppendInfo( CameraResult* record )
 			record->iPlateColor = 1;
 			record->iPlateTypeNo=6;
 		}
+        else if (strstr(tmpPlateColor, "ÂÌ"))
+        {
+            record->iPlateColor = 5;
+            record->iPlateTypeNo=6;
+            memset(record->chPlateColor, '\0', sizeof(record->chPlateColor));
+            char tmpPlate[32] = {0};
+            strcpy(tmpPlate, record->chPlateNO);
+            int len = 0;
+            len = strlen(tmpPlate);
+            if(tmpPlate[len - 1] == 'D' || tmpPlate[len - 1] == 'F')
+            {                
+                strcpy(record->chPlateColor,"»ÆÂÌ");
+                //sprintf(pCtrl->m_Result.pchPlate, "%s%s", "»ÆÂÌË«Æ´", tmpPlate);
+            }
+            else
+            {
+                strcpy(record->chPlateColor,"°×ÂÌ");
+                //sprintf(pCtrl->m_Result.pchPlate, "%s%s", "½¥±äÂÌ", tmpPlate);
+            }
+        }
 		else
 		{
 			record->iPlateColor = 0;
@@ -700,7 +720,7 @@ void Camera6467::AnalysisAppendInfo( CameraResult* record )
 		char sztempPlate[20] = {0};
 		sprintf(sztempPlate, "%s", record->chPlateNO + 2);
 		//sprintf(sztempPlate, "%s", record->chPlateNO);
-		if (NULL != sztempPlate)
+		if (strlen(sztempPlate) > 0)
 		{
 			memset(record->chPlateNO, 0, sizeof(record->chPlateNO));
 			sprintf(record->chPlateNO,"%s",sztempPlate);
